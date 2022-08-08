@@ -1063,6 +1063,18 @@ h3 {
   display: block;
 }
 
+.header__login {
+  display: none;
+}
+
+.header__login-btn {
+  display: none;
+}
+
+.header__balance {
+  display: none;
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1104,9 +1116,6 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   margin: 0 0 0 auto;
 }
 
@@ -1129,6 +1138,8 @@ h3 {
 }
 
 .header__profile-info {
+  display: flex;
+  flex-direction: column;
   font-size: 0.875em;
   line-height: 121.4285714286%;
   margin-left: 10px;
@@ -1140,10 +1151,13 @@ h3 {
   font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header__profile-row {
@@ -1164,6 +1178,9 @@ h3 {
   align-items: center;
   color: #79ffa7;
   font-weight: 500;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header__btns {
@@ -1216,6 +1233,20 @@ h3 {
   transition: 0.3s;
 }
 
+.header__profile-login {
+  width: 34px;
+  height: 34px;
+}
+
+.header__profile-login + .header__profile-login {
+  margin-left: 8px;
+}
+
+.header__profile-login svg {
+  width: 100%;
+  height: 100%;
+}
+
 .header__profile-progressbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1223,7 +1254,7 @@ h3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 6px;
+  margin-top: auto;
 }
 
 .header__profile-lvl {
@@ -6147,7 +6178,7 @@ h3 {
   }
 
   .header__logo {
-    margin-right: 25px;
+    margin-right: auto;
     width: 130px;
   }
 
@@ -6327,6 +6358,50 @@ h3 {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
+    width: 100%;
+  }
+
+  .header__login {
+    display: flex;
+  }
+
+  .header__login-link {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header__login-link + .header__login-link {
+    margin-left: 8px;
+  }
+
+  .header__login-link svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__login-btn {
+    display: block;
+    width: 20px;
+    height: 23px;
+    margin-top: 6px;
+  }
+
+  .header__login-btn svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__profile-login {
+    display: none;
+  }
+
+  .header__balance {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #79ffa7;
   }
 
   .header__nav {
@@ -7481,7 +7556,7 @@ h3 {
   }
 
   .header__wrapper_active {
-    margin-top: 10px;
+    margin-top: 19px;
     padding-top: 17px;
     position: fixed;
     overflow: hidden;
@@ -8653,11 +8728,12 @@ h3 {
     top: 0;
     left: 20px;
     right: 16px;
+    width: auto;
   }
 
   .header__logo {
     background: #181818;
-    padding: 11.5px 0px;
+    padding: 18px 0px 19px;
     margin-right: 0;
     width: 100%;
     display: -webkit-box;
@@ -8672,6 +8748,20 @@ h3 {
   .header__logo svg {
     width: 108px;
     height: 26px;
+  }
+
+  .header__login {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+
+  .header__balance {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .header__profile {
@@ -8723,7 +8813,7 @@ h3 {
   .burger-menu {
     position: absolute;
     left: 7px;
-    top: 2px;
+    top: 8px;
   }
 
   .burger-menu_active {
@@ -8752,6 +8842,33 @@ h3 {
 
   .modal-cases-all__case .modal-case__item:nth-child(-n + 2) {
     margin-top: 0;
+  }
+
+  .burger-menu {
+    top: 5px;
+  }
+
+  .header__logo {
+    padding: 15px 0 16px;
+  }
+
+  .header__login {
+    top: 14px;
+  }
+
+  .header__balance {
+    top: 20px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .header__login-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header__login-link + .header__login-link {
+    margin-left: 7px;
   }
 }
 
@@ -8927,6 +9044,38 @@ h3 {
 @media (max-width: 338px) {
   .modal-cases-all__case .modal-case__item:nth-child(1) {
     margin-top: 0;
+  }
+
+  .burger-menu {
+    top: 2px;
+  }
+
+  .header__logo {
+    padding: 11px 0 13px;
+  }
+
+  .header__login {
+    top: 12px;
+  }
+
+  .header__balance {
+    top: 15px;
+  }
+
+  .header__login-link {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__login-link + .header__login-link {
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 300px) {
+  .header__logo {
+    justify-content: start;
+    padding-left: 50px;
   }
 }
 

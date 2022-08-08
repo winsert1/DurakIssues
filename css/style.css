@@ -3053,6 +3053,14 @@ h3 {
   margin-top: 15px;
 }
 
+.profil__warning {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color: #757575;
+  margin-top: auto;
+}
+
 .profil__item {
   overflow: hidden;
   background: #262525;

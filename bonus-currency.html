@@ -43,6 +43,25 @@
                 </svg>
               </a>
             </div>
+
+            <!-- If not logged-in -->
+            <div class="header__login" style="display: none;">
+              <a href="##" class="header__login-link">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#vk_login"></use>
+                </svg>
+              </a>
+              <a href="##" class="header__login-link">
+                <svg>
+                  <use xlink:href="img/icons/sprite.svg#google_login"></use>
+                </svg>
+              </a>
+            </div>
+
+            <!-- If logged-in and has balance -->
+            <a href="##" class="header__balance">
+              <span>1.32m</span>
+            </a>
           </div>
 
           <div class="header__wrapper">
@@ -71,16 +90,21 @@
               </a>
 
               <div class="header__profile-info">
-                <div class="header__profile-name">Username
-                  <a href="##">
-                    <svg class="header__profile-settings">
-                      <use xlink:href="img/icons/sprite.svg#setings"></use>
-                    </svg>
-                  </a>
+                <a href="##" class="header__profile-name">
+                  <!-- If not logged-in -->
+                  <span style="display: none;">Anonymous</span>
 
-                </div>
+                  <!-- If logged-in -->
+                  <span>Username</span>
+
+                  <svg class="header__profile-settings">
+                    <use xlink:href="img/icons/sprite.svg#setings"></use>
+                  </svg>
+                </a>
+
                 <div class="header__profile-row">
-                  <div class="header__profile-sum">
+                  <!-- If user logged-in -->
+                  <a href="##" class="header__profile-sum">
                     <div class="header__profile-sum-img">
                       <svg>
                         <use xlink:href="img/icons/sprite.svg#dollar"></use>
@@ -88,18 +112,40 @@
                     </div>
 
                     <span>1.32m</span>
-                  </div>
+                  </a>
 
+                  <!-- If user logged-in -->
                   <a href="##" class="header__profile-link">
                     Пополнить
                   </a>
 
+                  <!-- If user logged-in -->
                   <a href="##" class="header__profile-link">
                     Вывести
                   </a>
+
+                  <!-- If not logged-in -->
+                  <a href="##" class="header__profile-login" style="display: none;">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#vk_login"></use>
+                    </svg>
+                  </a>
+                  <a href="##" class="header__profile-login" style="display: none;">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#google_login"></use>
+                    </svg>
+                  </a>
+
+                  <!-- Login btn mobile shown if not logged-in-->
+                  <a href="##" class="header__login-btn" style="display: none;">
+                    <svg>
+                      <use xlink:href="img/icons/sprite.svg#login"></use>
+                    </svg>
+                  </a>
                 </div>
 
-                <div class="header__profile-progressbar">
+                <!-- If user logged-in -->
+                <a href="##" class="header__profile-progressbar">
                   <div class="header__profile-lvl header__profile-lvl_back">
                     17<span>ур</span>
                   </div>
@@ -109,7 +155,7 @@
                   <div class="header__profile-lvl header__profile-lvl_next">
                     18<span>ур.</span>
                   </div>
-                </div>
+                </a>
 
                 <div class="header__btns">
                   <a href="##" class="header__profile-btn">

@@ -6728,6 +6728,10 @@ h3 {
     flex-wrap: wrap;
   }
 
+  .roulette__rull-wrapper {
+    padding-bottom: 12px;
+  }
+
   .roulette__rull-timer-wrapper {
     background: -webkit-gradient(
       linear,
@@ -6752,6 +6756,8 @@ h3 {
       rgba(25, 25, 25, 0.3) 0.01%,
       rgba(25, 25, 25, 0.5) 100%
     );
+    padding-bottom: 11px;
+    margin-top: -4px;
   }
 
   .bonus-currency__item {
@@ -8902,6 +8908,9 @@ h3 {
 }
 
 @media (max-width: 411px) {
+  .roulette__rull-wrapper {
+    padding-bottom: 5px;
+  }
   .roulette__accardion {
     height: 42px;
   }

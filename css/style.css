@@ -4897,7 +4897,6 @@ h3 {
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
-  stroke: #ababab;
 }
 
 .roulette__previous-sound {
@@ -6230,6 +6229,11 @@ h3 {
     margin-top: 10px;
   }
 
+  .roulette {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
   .transactions__name {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
@@ -6283,6 +6287,7 @@ h3 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+    margin-left: 0;
   }
 
   .add-bonus__item {

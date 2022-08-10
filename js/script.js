@@ -769,47 +769,47 @@ if (document.querySelector(".online-chat") && window.innerWidth < 991) {
     }, 100);
   }
 
-  function eventFocusChat() {
-    let valueMax =
-      document.querySelector(".header__logo").offsetHeight +
-      document.querySelector(".roulette__rull").offsetHeight;
+  // function eventFocusChat() {
+  //   let valueMax =
+  //     document.querySelector(".header__logo").offsetHeight +
+  //     document.querySelector(".roulette__rull").offsetHeight;
 
-    document
-      .querySelector(".online-chat__input")
-      .addEventListener("focus", function () {
-        document
-          .querySelector(".online-chat")
-          .classList.add("online-chat-focus");
-        if (document.documentElement.clientWidth < 991) {
-          document.querySelector(".online-chat").style.maxHeight = `unset`;
-          document.querySelector(".online-chat").style.top = 60 + "px";
-        }
-        if (document.documentElement.clientWidth > 540) {
-          document.querySelector(".online-chat").style.maxHeight = `unset`;
-          document.querySelector(".online-chat").style.top = 60 + "px";
-        }
-      });
+  //   document
+  //     .querySelector(".online-chat__input")
+  //     .addEventListener("focus", function () {
+  //       document
+  //         .querySelector(".online-chat")
+  //         .classList.add("online-chat-focus");
+  //       if (document.documentElement.clientWidth < 991) {
+  //         document.querySelector(".online-chat").style.maxHeight = `unset`;
+  //         document.querySelector(".online-chat").style.top = 60 + "px";
+  //       }
+  //       if (document.documentElement.clientWidth > 540) {
+  //         document.querySelector(".online-chat").style.maxHeight = `unset`;
+  //         document.querySelector(".online-chat").style.top = 60 + "px";
+  //       }
+  //     });
 
-    document
-      .querySelector(".online-chat__input")
-      .addEventListener("blur", function () {
-        document
-          .querySelector(".online-chat")
-          .classList.remove("online-chat-focus");
-        if (document.documentElement.clientWidth < 991) {
-          document.querySelector(".online-chat").style.top = "unset";
-          document.querySelector(".online-chat").style.maxHeight = `${
-            window.innerHeight - valueMax - 40
-          }px`;
-        }
-        if (document.documentElement.clientWidth > 540) {
-          document.querySelector(".online-chat").style.top = "unset";
-          document.querySelector(".online-chat").style.maxHeight = `${
-            window.innerHeight - valueMax - 80
-          }px`;
-        }
-      });
-  }
+  //   document
+  //     .querySelector(".online-chat__input")
+  //     .addEventListener("blur", function () {
+  //       document
+  //         .querySelector(".online-chat")
+  //         .classList.remove("online-chat-focus");
+  //       if (document.documentElement.clientWidth < 991) {
+  //         document.querySelector(".online-chat").style.top = "unset";
+  //         document.querySelector(".online-chat").style.maxHeight = `${
+  //           window.innerHeight - valueMax - 40
+  //         }px`;
+  //       }
+  //       if (document.documentElement.clientWidth > 540) {
+  //         document.querySelector(".online-chat").style.top = "unset";
+  //         document.querySelector(".online-chat").style.maxHeight = `${
+  //           window.innerHeight - valueMax - 80
+  //         }px`;
+  //       }
+  //     });
+  // }
   heightOnlineChat();
   window.addEventListener("resize", heightOnlineChat);
 

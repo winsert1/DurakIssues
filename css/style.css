@@ -4454,6 +4454,27 @@ h3 {
   position: relative;
 }
 
+.roulette__item.lost {
+  position: relative;
+}
+
+.roulette__item.lost::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(27, 27, 27, 0.4) 0%,
+    rgba(37, 37, 37, 0.3) 0%,
+    rgba(27, 27, 27, 0.4) 0.01%,
+    rgba(27, 27, 27, 0.4) 100%
+  );
+  border-radius: 4px;
+}
+
 .roulette__radio-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4493,11 +4514,48 @@ h3 {
   box-sizing: border-box;
 }
 
-.roulette__item-header:hover {
+.roulette__item-header:not(.disabled):not(.won):hover {
   cursor: pointer;
-  background: #212121;
-  -webkit-box-shadow: inset 0px 0px 100px rgba(255, 255, 255, 0.13);
-  box-shadow: inset 0px 0px 100px rgba(255, 255, 255, 0.13);
+  -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 100px rgba(255, 255, 255, 0.13);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 100px rgba(255, 255, 255, 0.13);
+}
+
+.roulette__item-header.disabled {
+  position: relative;
+  overflow: hidden;
+  cursor: not-allowed;
+}
+
+.roulette__item-header.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(37, 37, 37, 0.4) 0%,
+    rgba(37, 37, 37, 0.3) 0%,
+    rgba(27, 27, 27, 0.4) 0.01%,
+    rgba(27, 27, 27, 0.4) 100%
+  );
+  z-index: 2;
+}
+
+.roulette__item-header.bet {
+  border: 1px solid #5f5f5f;
+}
+
+.roulette__item-header.bet.disabled {
+  border-color: #444444;
+}
+
+.roulette__item-header.won {
+  border: 1px solid #5dd887;
+  cursor: not-allowed;
 }
 
 .roulette__item-name {
@@ -4529,19 +4587,23 @@ h3 {
   font-weight: 400;
 }
 
+.roulette__item-sum {
+  color: #ffeca8;
+}
+
+.roulette__item-header.lost .roulette__item-sum {
+  color: #c4364e;
+}
+
+.roulette__item-header.won .roulette__item-sum {
+  color: #5dd887;
+}
+
 .roulette__item-bid {
   color: #ced7e2;
   font-weight: 500;
   font-size: 0.875em;
   line-height: 121.4285714286%;
-}
-
-.roulette__item-bid_green {
-  color: #4fffaa;
-}
-
-.roulette__item-bid_red {
-  color: #c4364e;
 }
 
 .roulette__item-body {
@@ -4617,11 +4679,11 @@ h3 {
   font-weight: 500;
 }
 
-.roulette__item-money_green {
+.roulette__item.won .roulette__item-money {
   color: #4fffaa;
 }
 
-.roulette__item-money_red {
+.roulette__item.lost .roulette__item-money {
   color: #c4364e;
 }
 
@@ -8321,25 +8383,20 @@ h3 {
   }
 
   .roulette__item-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: 500;
     color: #c4c4c4;
     margin-left: 0;
   }
 
-  .roulette__item-bid {
-    text-align: center;
+  .roulette__item-title .separator {
+    display: none;
   }
 
-  .roulette__item-bid {
-    color: #818181;
-  }
-
-  .roulette__item-bid_green {
-    color: #818181;
-  }
-
-  .roulette__item-bid_red {
-    color: #818181;
+  .roulette__item-header.bet .roulette__item-bid {
+    display: none;
   }
 
   .roulette__item-username {

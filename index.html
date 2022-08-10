@@ -66,11 +66,385 @@
                 <a href="##" class="btns btns_vk add-bonus__btn">Подписаться во Вконтакте</a>
                 <a class="btns btns_vk btns_vk-active">Вы подписаны</a>
               </div>
-
-
             </div>
           </li>
         </ul>
+      </li>
+
+      <!-- Usual state of buttons -->
+      <li>
+        <div class="roulette__radio-wrapper"
+          style="background: #ccc; border: 1px solid; padding: 20px; margin-top: 30px;">
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-1" type="radio" name="bid">
+            <label for="bid-1" class="roulette__item-header">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#hearts_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Черви</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-2" type="radio" name="bid">
+            <label for="bid-2" class="roulette__item-header">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#coin_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Монета</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> Х14
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-3" type="radio" name="bid">
+            <label for="bid-3" class="roulette__item-header">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#spades_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Пики</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+        </div>
+      </li>
+      <!-- Disabled state of buttons -->
+      <li>
+        <div class="roulette__radio-wrapper"
+          style="background: #ccc; border: 1px solid; padding: 20px; margin-top: 30px;">
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-1" type="radio" name="bid">
+            <label for="bid-1" class="roulette__item-header disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#hearts_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Черви</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-2" type="radio" name="bid">
+            <label for="bid-2" class="roulette__item-header disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#coin_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Монета</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> Х14
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-3" type="radio" name="bid">
+            <label for="bid-3" class="roulette__item-header disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#spades_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Пики</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+        </div>
+      </li>
+      <!-- Bet state of buttons -->
+      <li>
+        <div class="roulette__radio-wrapper"
+          style="background: #ccc; border: 1px solid; padding: 20px; margin-top: 30px;">
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-1" type="radio" name="bid">
+            <label for="bid-1" class="roulette__item-header bet">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#hearts_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Черви<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-2" type="radio" name="bid">
+            <label for="bid-2" class="roulette__item-header bet">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#coin_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Монета<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> Х14
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-3" type="radio" name="bid">
+            <label for="bid-3" class="roulette__item-header bet">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#spades_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Пики<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+        </div>
+      </li>
+      <!-- Bet state of buttons + disabled -->
+      <li>
+        <div class="roulette__radio-wrapper"
+          style="background: #ccc; border: 1px solid; padding: 20px; margin-top: 30px;">
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-1" type="radio" name="bid">
+            <label for="bid-1" class="roulette__item-header bet disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#hearts_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Черви<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-2" type="radio" name="bid">
+            <label for="bid-2" class="roulette__item-header bet disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#coin_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Монета<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> Х14
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-3" type="radio" name="bid">
+            <label for="bid-3" class="roulette__item-header bet disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#spades_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Пики<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+        </div>
+      </li>
+      <!-- Lost state of buttons -->
+      <li>
+        <div class="roulette__radio-wrapper"
+          style="background: #ccc; border: 1px solid; padding: 20px; margin-top: 30px;">
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-1" type="radio" name="bid">
+            <label for="bid-1" class="roulette__item-header bet lost disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#hearts_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Черви<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-2" type="radio" name="bid">
+            <label for="bid-2" class="roulette__item-header bet lost disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#coin_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Монета<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> Х14
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-3" type="radio" name="bid">
+            <label for="bid-3" class="roulette__item-header bet lost disabled">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#spades_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Пики<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+        </div>
+      </li>
+      <!-- Won state of buttons -->
+      <li>
+        <div class="roulette__radio-wrapper"
+          style="background: #ccc; border: 1px solid; padding: 20px; margin-top: 30px;">
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-1" type="radio" name="bid">
+            <label for="bid-1" class="roulette__item-header bet won">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#hearts_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Победа<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-2" type="radio" name="bid">
+            <label for="bid-2" class="roulette__item-header bet won">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#coin_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Победа<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> Х14
+              </div>
+            </label>
+          </div>
+          <div class="roulette__radio-item">
+            <input class="roulette__radio" id="bid-3" type="radio" name="bid">
+            <label for="bid-3" class="roulette__item-header bet won">
+              <div class="roulette__item-name">
+                <div class="roulette__item-img">
+                  <svg>
+                    <use xlink:href="img/icons/sprite.svg#spades_stroke_white"></use>
+                  </svg>
+                </div>
+                <h3 class="roulette__item-title">
+                  <span class="label">Победа<span class="separator">:</span></span>
+                  <span class="roulette__item-sum">100K</span>
+                </h3>
+              </div>
+              <div class="roulette__item-bid">
+                <span>Ставка</span> X2
+              </div>
+            </label>
+          </div>
+        </div>
       </li>
     </ul>
 
@@ -288,11 +662,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
     <div class="popup" id="modalPayment">
       <div class="popup__body">
         <div class="popup__content modal modal_payment">
@@ -691,8 +1060,6 @@
 
       </div>
     </div>
-
-
     <div class="popup select-amount" id="selectAmountInput">
       <div class="popup__body">
         <div class="popup__content modal modal_select-amount modal_select-amount_input">

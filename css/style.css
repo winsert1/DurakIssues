@@ -5150,7 +5150,7 @@ h3 {
   line-height: 100%;
   font-weight: 500;
   margin-left: -2px;
-  margin-top: -1px;
+  margin-top: -5px;
 }
 
 .promo-code__form {
@@ -8911,6 +8911,7 @@ h3 {
   .roulette__rull-wrapper {
     padding-bottom: 5px;
   }
+
   .roulette__accardion {
     height: 42px;
   }

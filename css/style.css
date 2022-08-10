@@ -7637,7 +7637,7 @@ h3 {
   }
 
   .header__wrapper_active {
-    margin-top: 19px;
+    margin-top: 26px;
     padding-top: 17px;
     position: fixed;
     overflow: hidden;
@@ -8811,7 +8811,7 @@ h3 {
 
   .header__logo {
     background: #181818;
-    padding: 18px 0px 19px;
+    padding: 13px 0px;
     margin-right: 0;
     width: 100%;
     display: -webkit-box;
@@ -8824,8 +8824,7 @@ h3 {
   }
 
   .header__logo svg {
-    width: 108px;
-    height: 26px;
+    width: 147px;
   }
 
   .header__login {
@@ -8838,8 +8837,6 @@ h3 {
     position: absolute;
     top: 22px;
     right: 10px;
-    font-size: 16px;
-    line-height: 19px;
   }
 
   .header__profile {
@@ -8884,14 +8881,13 @@ h3 {
   }
 
   .burger-menu {
-    margin-top: 15px;
-    margin-left: 10px;
-  }
-
-  .burger-menu {
     position: absolute;
     left: 7px;
     top: 8px;
+    width: 25px;
+    height: 17px;
+    margin-top: 15px;
+    margin-left: 10px;
   }
 
   .burger-menu_active {
@@ -8922,27 +8918,8 @@ h3 {
     margin-top: 0;
   }
 
-  .burger-menu {
-    top: 5px;
-  }
-
-  .header__logo {
-    padding: 15px 0 16px;
-  }
-
   .header__login {
     top: 14px;
-  }
-
-  .header__balance {
-    top: 20px;
-    font-size: 15px;
-    line-height: 18px;
-  }
-
-  .header__login-link {
-    width: 30px;
-    height: 30px;
   }
 
   .header__login-link + .header__login-link {
@@ -8967,6 +8944,10 @@ h3 {
 }
 
 @media (max-width: 411px) {
+  .header__wrapper_active {
+    margin-top: 13px;
+  }
+
   .roulette__rull-wrapper {
     padding-bottom: 5px;
   }
@@ -9081,6 +9062,64 @@ h3 {
   }
 }
 
+@media (max-width: 411px) and (min-height: 800px) {
+  .burger-menu {
+    width: 22px;
+    height: 15px;
+    margin-top: 14px;
+  }
+
+  .header__logo {
+    padding: 10px 0;
+  }
+
+  .header__logo svg {
+    width: 126px;
+  }
+
+  .header__login-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header__balance {
+    top: 20px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media (max-width: 411px) and (max-height: 799px) {
+  .burger-menu {
+    width: 20px;
+    height: 15px;
+    margin-top: 10px;
+  }
+
+  .header__logo {
+    padding: 6px 0 7px;
+  }
+
+  .header__logo svg {
+    width: 114px;
+  }
+
+  .header__login {
+    top: 13px;
+  }
+
+  .header__login-link {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__balance {
+    top: 17px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
 @media (max-width: 380px) {
   .support__chat-answer {
     position: static;
@@ -9113,6 +9152,11 @@ h3 {
     right: 20px;
   }
 
+  .header__logo {
+    justify-content: start;
+    padding-left: 50px;
+  }
+
   .burger-menu_active {
     margin-left: 20px;
   }
@@ -9126,14 +9170,6 @@ h3 {
 @media (max-width: 338px) {
   .modal-cases-all__case .modal-case__item:nth-child(1) {
     margin-top: 0;
-  }
-
-  .burger-menu {
-    top: 2px;
-  }
-
-  .header__logo {
-    padding: 11px 0 13px;
   }
 
   .header__login {
@@ -9151,13 +9187,6 @@ h3 {
 
   .header__login-link + .header__login-link {
     margin-left: 6px;
-  }
-}
-
-@media (max-width: 300px) {
-  .header__logo {
-    justify-content: start;
-    padding-left: 50px;
   }
 }
 

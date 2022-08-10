@@ -813,8 +813,8 @@ if (document.querySelector(".online-chat") && window.innerWidth < 991) {
   heightOnlineChat();
   window.addEventListener("resize", heightOnlineChat);
 
-  eventFocusChat();
-  window.addEventListener("resize", eventFocusChat);
+  // eventFocusChat();
+  // window.addEventListener("resize", eventFocusChat);
 
   function closeRegulations() {
     let windowTerms = document.querySelector(".online-chat__rules");

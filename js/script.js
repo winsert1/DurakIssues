@@ -744,6 +744,7 @@ if (document.querySelector("main") && document.querySelector("footer")) {
 //! При нажатии на чат
 if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
   let chatHeight = null;
+  let chatBlockBody = document.querySelector(".online-chat__body");
 
   function heightOnlineChat() {
     setTimeout(function () {
@@ -762,10 +763,12 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
           document.querySelector(".online-chat").style.maxHeight = `${
             chatHeight - 40
           }px`;
+          chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         } else if (document.documentElement.clientWidth < 541) {
           document.querySelector(
             ".online-chat",
           ).style.maxHeight = `${chatHeight}px`;
+          chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         }
       }
     }, 100);
@@ -786,16 +789,17 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
         ) {
           document.querySelector(".online-chat").style.maxHeight = `unset`;
           document.querySelector(".online-chat").style.top = 77 + "px";
+          chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         } else if (document.documentElement.clientWidth < 541) {
           document.querySelector(".online-chat").style.maxHeight = `unset`;
           document.querySelector(".online-chat").style.top = valueMax + "px";
+          chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         }
       });
 
     document
       .querySelector(".online-chat__input")
       .addEventListener("blur", function () {
-        let chatBlockBody = document.querySelector(".online-chat__body");
         document
           .querySelector(".online-chat")
           .classList.remove("online-chat-focus");

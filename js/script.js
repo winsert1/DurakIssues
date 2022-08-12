@@ -790,11 +790,20 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
           document.querySelector(".online-chat").style.maxHeight = `unset`;
           document.querySelector(".online-chat").style.top = 77 + "px";
           // chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
-          chatBlockBody.scrollTo(0, chatBlockBody.body.scrollHeight);
+          // chatBlockBody.scrollTo(0, chatBlockBody.scrollHeight);
+          setTimeout(
+            () => (chatBlockBody.scrollTop = chatBlockBody.scrollHeight),
+            100,
+          );
         } else if (document.documentElement.clientWidth < 541) {
           document.querySelector(".online-chat").style.maxHeight = `unset`;
           document.querySelector(".online-chat").style.top = valueMax + "px";
           // chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
+          // chatBlockBody.scrollTo(0, chatBlockBody.scrollHeight);
+          setTimeout(
+            () => (chatBlockBody.scrollTop = chatBlockBody.scrollHeight),
+            100,
+          );
         }
       });
 

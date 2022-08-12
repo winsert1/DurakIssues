@@ -4428,9 +4428,9 @@ h3 {
   color: #9a9a9a;
 }
 
-.roulette__accardion-num img {
+.roulette__accardion-num svg {
   width: 14px;
-  height: auto;
+  height: 14px;
 }
 
 .roulette__items {
@@ -7215,7 +7215,7 @@ h3 {
   }
 
   .profil__name a svg {
-    margin: 0px 6px 0px 0px;
+    margin: 6px 6px 0px 0px;
   }
 
   .profil__btn {
@@ -8013,8 +8013,9 @@ h3 {
   }
 
   .profil__name svg {
-    width: 17px;
-    height: 17px;
+    width: 45px;
+    height: 45px;
+    margin-left: 0;
   }
 
   .profil__icon-settings {
@@ -8053,7 +8054,7 @@ h3 {
 
   .profil__progressbar-current svg {
     display: block;
-    width: 20px;
+    width: 21px;
     height: 20px;
   }
 

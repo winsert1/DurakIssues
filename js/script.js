@@ -781,10 +781,10 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
           (document.documentElement.clientWidth <= 991) &
           (document.documentElement.clientWidth >= 541)
         ) {
-          document.querySelector(".online-chat").style.maxHeight = `auto`;
+          document.querySelector(".online-chat").style.maxHeight = `unset`;
           document.querySelector(".online-chat").style.top = 77 + "px";
         } else if (document.documentElement.clientWidth < 541) {
-          document.querySelector(".online-chat").style.maxHeight = `auto`;
+          document.querySelector(".online-chat").style.maxHeight = `unset`;
           document.querySelector(".online-chat").style.top = valueMax + "px";
         }
       });

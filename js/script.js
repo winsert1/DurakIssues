@@ -743,6 +743,8 @@ if (document.querySelector("main") && document.querySelector("footer")) {
 
 //! При нажатии на чат
 if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
+  let chatHeight = null;
+
   function heightOnlineChat() {
     setTimeout(function () {
       if (
@@ -751,18 +753,19 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
           .classList.contains("online-chat-focus")
       ) {
         let valueMax = document.querySelector(".header__logo").offsetHeight;
+        chatHeight = window.innerHeight - valueMax;
 
         if (
           (document.documentElement.clientWidth <= 991) &
           (document.documentElement.clientWidth >= 541)
         ) {
           document.querySelector(".online-chat").style.maxHeight = `${
-            window.innerHeight - valueMax - 40
+            chatHeight - 40
           }px`;
         } else if (document.documentElement.clientWidth < 541) {
-          document.querySelector(".online-chat").style.maxHeight = `${
-            window.innerHeight - valueMax
-          }px`;
+          document.querySelector(
+            ".online-chat",
+          ).style.maxHeight = `${chatHeight}px`;
         }
       }
     }, 100);
@@ -802,15 +805,15 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
         ) {
           document.querySelector(".online-chat").style.top = "unset";
           document.querySelector(".online-chat").style.maxHeight = `${
-            window.innerHeight - valueMax - 40
+            chatHeight - 40
           }px`;
           chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         }
         if (document.documentElement.clientWidth < 541) {
           document.querySelector(".online-chat").style.top = "unset";
-          document.querySelector(".online-chat").style.maxHeight = `${
-            window.innerHeight - valueMax
-          }px`;
+          document.querySelector(
+            ".online-chat",
+          ).style.maxHeight = `${chatHeight}px`;
           chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         }
       });

@@ -2398,6 +2398,7 @@ h3 {
   max-width: 25%;
   position: relative;
   max-height: calc(100vh - 204px);
+  transition: max-height 0.3s;
 }
 
 .online-chat svg {

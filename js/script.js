@@ -742,8 +742,7 @@ if (document.querySelector("main") && document.querySelector("footer")) {
 }
 
 //! При нажатии на чат
-if (document.querySelector(".online-chat") && window.innerWidth < 991) {
-  let windowHeigthNow = window.innerHeight;
+if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
   function heightOnlineChat() {
     setTimeout(function () {
       if (
@@ -751,70 +750,74 @@ if (document.querySelector(".online-chat") && window.innerWidth < 991) {
           .querySelector(".online-chat")
           .classList.contains("online-chat-focus")
       ) {
-        let valueMax =
-          document.querySelector(".header__logo").offsetHeight;
+        let valueMax = document.querySelector(".header__logo").offsetHeight;
 
-        if (document.documentElement.clientWidth < 991) {
+        if (
+          (document.documentElement.clientWidth <= 991) &
+          (document.documentElement.clientWidth >= 541)
+        ) {
+          document.querySelector(".online-chat").style.maxHeight = `${
+            window.innerHeight - valueMax - 40
+          }px`;
+        } else if (document.documentElement.clientWidth < 541) {
           document.querySelector(".online-chat").style.maxHeight = `${
             window.innerHeight - valueMax
           }px`;
         }
-
-        // if (document.documentElement.clientWidth > 540) {
-        //   document.querySelector(".online-chat").style.maxHeight = `${
-        //     window.innerHeight - valueMax
-        //   }px`;
-        // }
       }
     }, 100);
   }
 
-  // function eventFocusChat() {
-  //   let valueMax =
-  //     document.querySelector(".header__logo").offsetHeight +
-  //     document.querySelector(".roulette__rull").offsetHeight;
+  function eventFocusChat() {
+    let valueMax = document.querySelector(".header__logo").offsetHeight;
 
-  //   document
-  //     .querySelector(".online-chat__input")
-  //     .addEventListener("focus", function () {
-  //       document
-  //         .querySelector(".online-chat")
-  //         .classList.add("online-chat-focus");
-  //       if (document.documentElement.clientWidth < 991) {
-  //         document.querySelector(".online-chat").style.maxHeight = `unset`;
-  //         document.querySelector(".online-chat").style.top = 60 + "px";
-  //       }
-  //       if (document.documentElement.clientWidth > 540) {
-  //         document.querySelector(".online-chat").style.maxHeight = `unset`;
-  //         document.querySelector(".online-chat").style.top = 60 + "px";
-  //       }
-  //     });
+    document
+      .querySelector(".online-chat__input")
+      .addEventListener("focus", function () {
+        document
+          .querySelector(".online-chat")
+          .classList.add("online-chat-focus");
+        if (
+          (document.documentElement.clientWidth <= 991) &
+          (document.documentElement.clientWidth >= 541)
+        ) {
+          document.querySelector(".online-chat").style.maxHeight = `auto`;
+          document.querySelector(".online-chat").style.top = 77 + "px";
+        } else if (document.documentElement.clientWidth < 541) {
+          document.querySelector(".online-chat").style.maxHeight = `auto`;
+          document.querySelector(".online-chat").style.top = valueMax + "px";
+        }
+      });
 
-  //   document
-  //     .querySelector(".online-chat__input")
-  //     .addEventListener("blur", function () {
-  //       document
-  //         .querySelector(".online-chat")
-  //         .classList.remove("online-chat-focus");
-  //       if (document.documentElement.clientWidth < 991) {
-  //         document.querySelector(".online-chat").style.top = "unset";
-  //         document.querySelector(".online-chat").style.maxHeight = `${
-  //           window.innerHeight - valueMax - 40
-  //         }px`;
-  //       }
-  //       if (document.documentElement.clientWidth > 540) {
-  //         document.querySelector(".online-chat").style.top = "unset";
-  //         document.querySelector(".online-chat").style.maxHeight = `${
-  //           window.innerHeight - valueMax - 80
-  //         }px`;
-  //       }
-  //     });
-  // }
+    document
+      .querySelector(".online-chat__input")
+      .addEventListener("blur", function () {
+        document
+          .querySelector(".online-chat")
+          .classList.remove("online-chat-focus");
+        if (
+          (document.documentElement.clientWidth <= 991) &
+          (document.documentElement.clientWidth >= 541)
+        ) {
+          document.querySelector(".online-chat").style.top = "unset";
+          document.querySelector(".online-chat").style.maxHeight = `${
+            window.innerHeight - valueMax - 40
+          }px`;
+        }
+        if (document.documentElement.clientWidth < 541) {
+          document.querySelector(".online-chat").style.top = "unset";
+          document.querySelector(".online-chat").style.maxHeight = `${
+            window.innerHeight - valueMax
+          }px`;
+        }
+      });
+  }
+
   heightOnlineChat();
   window.addEventListener("resize", heightOnlineChat);
 
-  // eventFocusChat();
-  // window.addEventListener("resize", eventFocusChat);
+  eventFocusChat();
+  window.addEventListener("resize", eventFocusChat);
 
   function closeRegulations() {
     let windowTerms = document.querySelector(".online-chat__rules");

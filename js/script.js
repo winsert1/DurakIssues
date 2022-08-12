@@ -854,12 +854,14 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
 if (document.querySelector(".chat-open-btn")) {
   let btnOpenChat = document.querySelector(".chat-open-btn");
   let chatBlock = document.querySelector(".online-chat");
+  let chatBlockBody = document.querySelector(".online-chat__body");
   let closeBtnChat = document.querySelector(".online-chat__icon-close");
   btnOpenChat.addEventListener("click", function () {
     setTimeout(() => {
       chatBlock.classList.add("online-chat_active");
       chatBlock.style.display = "flex";
       document.body.classList.add("overflow-h");
+      chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
     }, 100);
   });
 

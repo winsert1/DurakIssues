@@ -6573,6 +6573,10 @@ h3 {
     min-width: unset;
   }
 
+  .online-chat__body-wrapper {
+    scroll-snap-align: unset;
+  }
+
   .online-chat__header-rigth {
     display: none;
   }

@@ -792,6 +792,7 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
     document
       .querySelector(".online-chat__input")
       .addEventListener("blur", function () {
+        let chatBlockBody = document.querySelector(".online-chat__body");
         document
           .querySelector(".online-chat")
           .classList.remove("online-chat-focus");
@@ -803,12 +804,14 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
           document.querySelector(".online-chat").style.maxHeight = `${
             window.innerHeight - valueMax - 40
           }px`;
+          chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         }
         if (document.documentElement.clientWidth < 541) {
           document.querySelector(".online-chat").style.top = "unset";
           document.querySelector(".online-chat").style.maxHeight = `${
             window.innerHeight - valueMax
           }px`;
+          chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
         }
       });
   }

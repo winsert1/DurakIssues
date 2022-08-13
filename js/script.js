@@ -589,9 +589,9 @@ if (document.querySelector(".amount-selection__form")) {
 
 //!Настройка профиля
 if (document.querySelector(".profile-settings")) {
-  let avaBtnHide = document.getElementById("avaBtnHide");
-  let avaBtnShow = document.getElementById("avaBtnShow");
-  let imgMain = document.getElementById("imgAvaImg");
+  const avaBtnHide = document.getElementById("avaBtnHide");
+  const avaBtnShow = document.getElementById("avaBtnShow");
+  const imgMain = document.getElementById("profileImage");
 
   function getImage() {
     let randomNum = Math.floor(Math.random() * 3);

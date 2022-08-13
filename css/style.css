@@ -229,6 +229,7 @@ body.lock {
   opacity: 1;
   visibility: visible;
   overflow-y: auto;
+  z-index: 100000;
 }
 
 .popup.open .popup__content {

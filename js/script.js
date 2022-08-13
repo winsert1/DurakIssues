@@ -595,7 +595,7 @@ if (document.querySelector(".profile-settings")) {
 
   function getImage() {
     let randomNum = Math.floor(Math.random() * 3);
-    imgMain.setAttribute("src", `../img/avatar/${randomNum}.png`);
+    imgMain.setAttribute("src", `img/avatar/${randomNum}.png`);
   }
 
   avaBtnHide.addEventListener("click", () => {
@@ -824,7 +824,7 @@ if (document.querySelector(".online-chat") && window.innerWidth <= 991) {
   window.addEventListener("resize", () => {
     setTimeout(() => {
       chatBlockBody.scrollTop = chatBlockBody.scrollHeight;
-    }, 1000);
+    }, 500);
   });
 
   heightOnlineChat();

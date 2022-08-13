@@ -604,7 +604,7 @@ if (document.querySelector(".profile-settings")) {
     avaBtnShow.style.display = "block";
   });
   avaBtnShow.addEventListener("click", () => {
-    imgMain.setAttribute("src", `../img/avatar/user/avatar.png`);
+    imgMain.setAttribute("src", `img/avatar/user/avatar.png`);
     avaBtnShow.style.display = "none";
     avaBtnHide.style.display = "block";
   });

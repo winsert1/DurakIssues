@@ -595,7 +595,7 @@ if (document.querySelector(".profile-settings")) {
 
   function getImage() {
     let randomNum = Math.floor(Math.random() * 3);
-    profileImage.setAttribute("src", `img/avatar/${randomNum}.png`);
+    profileImage.setAttribute("src", `img/avatar/${randomNum}.svg`);
   }
 
   avaBtnHide.addEventListener("click", () => {

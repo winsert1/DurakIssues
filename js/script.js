@@ -591,11 +591,11 @@ if (document.querySelector(".amount-selection__form")) {
 if (document.querySelector(".profile-settings")) {
   const avaBtnHide = document.getElementById("avaBtnHide");
   const avaBtnShow = document.getElementById("avaBtnShow");
-  const imgMain = document.getElementById("profileImage");
+  const profileImage = document.getElementById("profileImage");
 
   function getImage() {
     let randomNum = Math.floor(Math.random() * 3);
-    imgMain.setAttribute("src", `img/avatar/${randomNum}.png`);
+    profileImage.setAttribute("src", `img/avatar/${randomNum}.png`);
   }
 
   avaBtnHide.addEventListener("click", () => {
@@ -605,7 +605,7 @@ if (document.querySelector(".profile-settings")) {
   });
 
   avaBtnShow.addEventListener("click", () => {
-    imgMain.setAttribute("src", `img/avatar/user/avatar.png`);
+    profileImage.setAttribute("src", `img/avatar/user/avatar.png`);
     avaBtnShow.style.display = "none";
     avaBtnHide.style.display = "block";
   });

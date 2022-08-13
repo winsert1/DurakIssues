@@ -591,7 +591,7 @@ if (document.querySelector(".amount-selection__form")) {
 if (document.querySelector(".profile-settings")) {
   let avaBtnHide = document.getElementById("avaBtnHide");
   let avaBtnShow = document.getElementById("avaBtnShow");
-  let imgMain = document.querySelector("#imgAvaImg");
+  let imgMain = document.getElementById("imgAvaImg");
 
   function getImage() {
     let randomNum = Math.floor(Math.random() * 3);
@@ -603,6 +603,7 @@ if (document.querySelector(".profile-settings")) {
     avaBtnHide.style.display = "none";
     avaBtnShow.style.display = "block";
   });
+
   avaBtnShow.addEventListener("click", () => {
     imgMain.setAttribute("src", `img/avatar/user/avatar.png`);
     avaBtnShow.style.display = "none";

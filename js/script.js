@@ -238,6 +238,7 @@ if (document.querySelector(".select-amount__slider")) {
     let selectAmountSlider = new Swiper(".select-amount__slider", {
       slidesPerView: 2,
       // loop: true,
+      watchSlidesProgress: true,
       allowTouchMove: false,
       direction: "vertical",
       //spaceBetween: 30,

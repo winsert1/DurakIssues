@@ -232,7 +232,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // swiperF();
   }
 
-  if (document.querySelector(".select-amount__slider")) {
+  if (document.querySelector("#selectAmountInput .select-amount__slider")) {
     let SwiperLeft = document.querySelector(".select-amount__up");
     let SwiperRight = document.querySelector(".select-amount__down");
 
@@ -243,20 +243,67 @@ window.addEventListener("DOMContentLoaded", () => {
       "#selectAmountInput .select-amount__wrapper",
     );
     const slides = sliderWrapper.querySelectorAll(
-      "#selectAmountInput.swiper-slide",
+      "#selectAmountInput .swiper-slide",
     );
 
     if (document.documentElement.clientWidth > 575 && slides.length > 2) {
-      let selectAmountSlider = new Swiper(".select-amount__slider", {
-        slidesPerView: 2,
-        watchSlidesProgress: true,
-        allowTouchMove: false,
-        direction: "vertical",
-        navigation: {
-          nextEl: ".select-amount__down",
-          prevEl: ".select-amount__up",
+      let selectAmountSlider = new Swiper(
+        "#selectAmountInput .select-amount__slider",
+        {
+          slidesPerView: 2,
+          watchSlidesProgress: true,
+          allowTouchMove: false,
+          direction: "vertical",
+          navigation: {
+            nextEl: ".select-amount__down",
+            prevEl: ".select-amount__up",
+          },
         },
+      );
+    } else {
+      slider.classList.remove("swiper");
+
+      sliderWrapper.classList.remove("swiper-wrapper");
+      sliderWrapper.classList.add("swiper-wrapper-reset");
+
+      slides.forEach(function (item) {
+        item.classList.remove("swiper-slide");
+        item.classList.add("swiper-slide-reset");
       });
+
+      SwiperLeft.remove();
+      SwiperRight.remove();
+    }
+  }
+
+  if (document.querySelector("#selectAmount .select-amount__slider")) {
+    let SwiperLeft = document.querySelector(".select-amount__up");
+    let SwiperRight = document.querySelector(".select-amount__down");
+
+    const slider = document.querySelector(
+      "#selectAmount .select-amount__slider",
+    );
+    const sliderWrapper = document.querySelector(
+      "#selectAmount .select-amount__wrapper",
+    );
+    const slides = sliderWrapper.querySelectorAll(
+      "#selectAmount .swiper-slide",
+    );
+
+    if (document.documentElement.clientWidth > 575 && slides.length > 2) {
+      let selectAmountSlider = new Swiper(
+        "#selectAmount .select-amount__slider",
+        {
+          slidesPerView: 2,
+          watchSlidesProgress: true,
+          allowTouchMove: false,
+          direction: "vertical",
+          navigation: {
+            nextEl: ".select-amount__down",
+            prevEl: ".select-amount__up",
+          },
+        },
+      );
     } else {
       slider.classList.remove("swiper");
 
@@ -873,7 +920,7 @@ window.addEventListener("DOMContentLoaded", () => {
     closeRegulations();
   }
 
-  //! Октрытие и закурытие чата на мобилках
+  //! Октрытие и закрытие чата на мобилках
   if (document.querySelector(".chat-open-btn")) {
     let btnOpenChat = document.querySelector(".chat-open-btn");
     let chatBlock = document.querySelector(".online-chat");

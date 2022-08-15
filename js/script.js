@@ -234,17 +234,15 @@ if (document.querySelector(".select-amount__slider")) {
   let SwiperLeft = document.querySelector(".select-amount__up");
   let SwiperRight = document.querySelector(".select-amount__down");
 
-  if (document.documentElement.clientWidth > 575 && SWIPER_SLIDE.length > 2) {
+  if (
+    (document.documentElement.clientWidth > 575) &
+    (SWIPER_SLIDE.length > 2)
+  ) {
     let selectAmountSlider = new Swiper(".select-amount__slider", {
       slidesPerView: 2,
-      // loop: true,
       watchSlidesProgress: true,
       allowTouchMove: false,
       direction: "vertical",
-      //spaceBetween: 30,
-      // grid: {
-      // 	rows: 1,
-      // },
       navigation: {
         nextEl: ".select-amount__down",
         prevEl: ".select-amount__up",

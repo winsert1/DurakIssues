@@ -7691,6 +7691,10 @@ h3 {
     display: none;
   }
 
+  .select-amount__content {
+    overflow-y: auto;
+  }
+
   .select-amount__item {
     width: 134px;
     height: 107px;

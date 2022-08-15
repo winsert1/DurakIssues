@@ -236,9 +236,15 @@ window.addEventListener("DOMContentLoaded", () => {
     let SwiperLeft = document.querySelector(".select-amount__up");
     let SwiperRight = document.querySelector(".select-amount__down");
 
-    const slider = document.querySelector(".select-amount__slider");
-    const sliderWrapper = document.querySelector(".select-amount__wrapper");
-    const slides = sliderWrapper.querySelectorAll(".swiper-slide");
+    const slider = document.querySelector(
+      "#selectAmountInput .select-amount__slider",
+    );
+    const sliderWrapper = document.querySelector(
+      "#selectAmountInput .select-amount__wrapper",
+    );
+    const slides = sliderWrapper.querySelectorAll(
+      "#selectAmountInput.swiper-slide",
+    );
 
     if (document.documentElement.clientWidth > 575 && slides.length > 2) {
       let selectAmountSlider = new Swiper(".select-amount__slider", {

@@ -2957,6 +2957,7 @@ h3 {
   -ms-flex: 0 0 70%;
   flex: 0 0 70%;
   max-width: 70%;
+  height: 430px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5895,6 +5896,7 @@ h3 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
     max-width: 75%;
+    height: 310px;
     padding-right: 15px;
   }
 
@@ -5926,6 +5928,7 @@ h3 {
 
   .profil__slider {
     padding-left: 15px;
+    height: 298px;
   }
 
   .transactions__name {
@@ -6465,6 +6468,14 @@ h3 {
   .profil__item-tag {
     font-size: 0.625em;
     line-height: 140%;
+  }
+
+  .profil__items {
+    height: 100%;
+  }
+
+  .profil__slider {
+    height: 100%;
   }
 
   .support {
